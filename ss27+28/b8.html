@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s=[1, 2, 1, 'a','b','a',3,3, 4, 'f'];
+        let arr=[];
+        for (let i = 0; i < s.length; i++) {
+            let count=1;
+            for(let j=0;j<s.length;j++){
+                if (s[i]==arr[j]){
+                    count=0;
+                }
+            }
+            if(count){
+                arr.push(s[i])
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>

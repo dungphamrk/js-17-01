@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bt10</title>
+  </head>
+  <body>
+    <script>
+        let s=[1, 2, 1, 'a','b','a',3, 4, 'f','b',2];
+        let arr=new Array();
+        let max=0;
+        let check=1;
+        let result=new Array();
+        for (let j = 0; j < s.length; j++) {       
+          for (let i = 0; i < s.length; i++) {
+            arr[s[i]]=0;
+          }
+          let count=0;
+          for (let i = j; i < s.length; i++) {
+            if (arr[s[i]]===0) {
+              arr[s[i]]++;
+              count++;
+            }else{
+              break;
+            }
+          }
+          if (count>max) {
+            max=count;
+            for (let i = 0; i < arr.length; i++) {
+              result.pop();
+            }
+            for (const key in arr) {
+              if (arr[key]===1) {
+                  result.push(key);
+              }
+            }
+          }  
+        } 
+    console.log(result);
+        
+  </script>
+  </body>
+</html>

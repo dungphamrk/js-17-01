@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+ /*Tham trị (Value):
+Khi bạn gán một giá trị từ một biến sang một biến khác, JavaScript thường sử dụng tham trị. Điều này có nghĩa là
+giá trị của biến được sao chép vào biến mới.
+
+Tham chiếu (Reference):
+Khi bạn gán một đối tượng (bao gồm mảng) từ một biến sang biến khác, JavaScript sử dụng tham chiếu. Thay vì sao chép
+giá trị, nó sao chép "địa chỉ" của đối tượng. Do đó, nếu  bạn thay đổi đối tượng thông qua một biến, các biến khác
+trỏ đến cùng một đối tượng cũng sẽ thay đổi.*/
+let numbers = [1, 2, 3, 4, 5];
+let newArr = numbers.slice(); // hoặc numbers.concat();
+let arr=newArr;
+newArr.push(8);
+console.log(newArr); 
+console.log(numbers);
+console.log(arr); 
+    </script>
+    </body>
+</html>
