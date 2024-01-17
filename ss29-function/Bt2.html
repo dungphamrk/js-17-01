@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bt2</title>
+  </head>
+  <body>
+    <script>
+     function check_length(n) {
+        if (!isNaN(n)) {
+           return n.toString().length;
+        }
+        return n.length;
+     }
+     function find_maxIndex(arr) {
+        let max=0;
+        for (let i = 0; i < arr.length; i++) {
+            max=arr[i]>max?arr[i]:max;
+        }
+        for (let i = 0; i < arr.length; i++) {
+           if( arr[i]===max){
+            return i;
+           }
+        }
+     }
+     let max=0;
+     let str=[1,2,123,'ádasd','agdhjk'];
+     let arr=new Array();
+     for (let i = 0; i < str.length; i++) {
+       arr[i]=check_length(str[i]);
+     }
+     console.log("phan tu can tim la",str[find_maxIndex(arr)]);
+    </script>
+  </body>
+</html>

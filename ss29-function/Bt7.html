@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    let arr = [1,2,3,45,6,7,444,2,8,9,2];
+       function sum (arr, target) {
+        let a = [];
+        for (let i = 0; i < arr.length; i++) {
+          let n = arr[i];
+          if (a[target - n] >= 0) {
+            return [(target-n),arr[i]];
+          } else {
+            a[n] = i;
+          }
+        }
+      };
+      let a = +prompt("nhap so bat ky");
+      console.log(sum(arr, a));
+    </script>
+  </body>
+</html>

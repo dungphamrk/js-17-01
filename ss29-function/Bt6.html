@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+let str = "fvgbh cvbn ertyu";
+function upCase(str) {
+  let s = str.split(" ");
+  for (let i = 0; i < s.length; i++) {
+    s[i] = s[i][0].toUpperCase() + s[i].slice(1);
+  }
+  return s.join(" ");
+}
+console.log(upCase(str));
+    </script>
+  </body>
+</html>
